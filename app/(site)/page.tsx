@@ -1,5 +1,6 @@
-
+import ListItem from "@/Components/ListItem";
 import Header from "@/Components/Header";
+
 export default function Home() {
   return (
   <div 
@@ -10,6 +11,45 @@ export default function Home() {
   h-full
   overflow-hidden
   overflow-y-auto">
-    <Header></Header>
-  </div>);
+    <Header>
+      <div className="
+        mb-2">
+        <h1
+        className="
+        text-white
+        text-3xl
+        font-semibold">Welcome black
+        </h1>
+        <div className="
+        grid
+        grid-cols-1
+        sm:grid-cols-2
+        xl:grid-cols-3
+        2xl:grid-cols-4
+        gap-3
+        mt-4"> 
+        <ListItem 
+        image="/images/image1.jpg"
+        name="Liked Songs"
+        href="liked"/>
+        </div>
+      </div>
+    </Header>
+    <div
+    className="mt-2 mb-7 px-6">
+      <div 
+        className="flex 
+        justify-between 
+        items-center">
+        <h1
+          className="text-white
+          text-2xl
+          font-semibold"> 
+          Newest Songs
+        </h1>
+      </div>
+      <div>List of Songs</div>
+    </div>
+  </div>
+  );
 }

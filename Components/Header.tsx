@@ -100,11 +100,32 @@ interface HeaderProps{
     gap-x-4'>
         <>
         <div>
-            <Button/>
+            <Button 
+            onClick={()=>{}}
+            className='
+            bg-transparent
+            text-neutral-300
+            font-medium'>
+                Sign Up
+            </Button>
+            
+        </div>
+        <div>
+            <Button
+            onClick={()=>{}} 
+            className='
+            bg-white
+            px-6
+            py-2'
+           >
+                Login
+            </Button>
+            
         </div>
         </>
     </div>
-    </div>     
+    </div>   
+    {children}  
     </div>
   );
 }
