@@ -1,5 +1,6 @@
 import ListItem from "@/Components/ListItem";
 import Header from "@/Components/Header";
+export const revalidate = 0;
 
 export default function Home() {
   return (

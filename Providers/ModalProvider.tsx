@@ -1,7 +1,8 @@
 "use client";
 import React, { useEffect, useState } from 'react'
-import Modal from './Modal';
-
+import Modal from '../Components/Modal'
+import AuthModal from '@/Components/AuthModal';
+import UploadModal from '@/Components/UploadModal';
 const ModalProvider=()=> {
     const [isMounted, SetIsMounted] = useState(false);
     useEffect(()=>{
@@ -12,13 +13,8 @@ const ModalProvider=()=> {
     }
   return (
     <>
-        <Modal 
-        title='Test Modal'
-        description='Test Description'
-        isOpen
-        onChange={()=>{}}>
-            Test Children
-        </Modal>
+        <AuthModal/>
+        <UploadModal />
     </>
   )
 }
