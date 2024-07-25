@@ -1,21 +1,31 @@
 import useAuthModal from '@/hooks/useAuthModal';
 import useUploadModal from '@/hooks/useUploadModal';
 import { useUser } from '@/hooks/useUser';
+import { Song } from '@/types';
 import React from 'react';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { TbPlaylist } from 'react-icons/tb';
+import MediaItem from './MediaItem';
 
-const Library=() =>{
+interface LibraryProps{
+    songs: Song[];
+}
+
+const Library: React.FC<LibraryProps>=({
+   songs 
+}) =>{
     const authModal = useAuthModal();
     const {user, subscription} = useUser();
     const uploadModal = useUploadModal();
-    const onClick=()=>{
+    
+    const onClick=()=>{  
         if(!user){
             return authModal.onOpen();
         }
         return uploadModal.onOpen();
         //TODO: Check for subscription
     };
+    console.log(songs)
   return (
     <div className='flex flex-col'>
         <div 
@@ -51,7 +61,15 @@ const Library=() =>{
         flex-col
         gap-y-2
         mt-4
-        px-4'>List of Songs</div>
+        px-3'>
+            {songs.map((item) =>(
+            <MediaItem 
+            onClick={() =>{}}
+            key={item.id}
+            data={item}/>
+            ))}
+            
+        </div>
     </div>
   )
 }
