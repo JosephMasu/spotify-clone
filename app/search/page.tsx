@@ -1,3 +1,5 @@
+export const revalidate =0;
+
 import getSongsByTitle from "@/Actions/getSongsByTitle";
 import Header from "@/Components/Header";
 import SearchInput from "@/Components/SearchInput";
