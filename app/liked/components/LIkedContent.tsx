@@ -49,7 +49,7 @@ const LIkedContent:React.FC<LIkedContentProps> = (
          key={song.id}
          className='
         flex
-        flex-col
+        items-center
         gap-x-4
         w-full
          '>
