@@ -10,3 +10,5 @@ export const stripe = new Stripe(
         }
     }
 );
+
+export default stripe;
